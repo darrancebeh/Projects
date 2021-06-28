@@ -49,26 +49,7 @@ def game():
         "Scissors"
     ]
 
-    if(computer == playerInt):
-        result = 0
-
-    elif(computer == 0 and playerInt == 1):
-        result = 1
-
-    elif(computer == 1 and playerInt == 2):
-        result = 1
-
-    elif(computer == 2 and playerInt == 0):
-        result = 1
-
-    elif(computer == 0 and playerInt == 2):
-        result = 2
-
-    elif(computer == 1 and playerInt == 0):
-        result = 2
-
-    elif(computer == 2 and playerInt == 1):
-        result = 2
+    result = (playerInt - computer) % 3
         
     resultMessages = [
         "It's a tie! Both of you chose " + str(intToOption[playerInt] + "."),
