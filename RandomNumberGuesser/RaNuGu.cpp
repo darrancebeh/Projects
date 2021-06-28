@@ -11,7 +11,6 @@ int main()
     int history[totalgames + 1];
     do{
         int key, guess(0), attempts(1);
-        int i;
         totalgames++;
         srand(time(0));
         key = rand()% 100 + 1;
