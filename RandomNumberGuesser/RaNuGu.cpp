@@ -13,7 +13,7 @@ int main()
         int key, guess(0), attempts(1);
         totalgames++;
         srand(time(0));
-        key = rand()% 100 + 1;
+        key = rand()% 101;
         
         cout << string(50, '\n');
         cout << "Random number generated, (0 - 100). Good luck!" << endl;
