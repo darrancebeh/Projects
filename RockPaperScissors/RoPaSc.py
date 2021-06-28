@@ -33,7 +33,7 @@ def lobby():
 
 def game():
     clear()
-    bot = random.randint(0,2)
+    computer = random.randint(0,2)
     player = input("Rock, Paper or Scissors?\n").lower()
 
     if(player[0] == 'r'):
@@ -49,31 +49,31 @@ def game():
         "Scissors"
     ]
 
-    if(bot == playerInt):
+    if(computer == playerInt):
         result = 0
 
-    elif(bot == 0 and playerInt == 1):
+    elif(computer == 0 and playerInt == 1):
         result = 1
 
-    elif(bot == 1 and playerInt == 2):
+    elif(computer == 1 and playerInt == 2):
         result = 1
 
-    elif(bot == 2 and playerInt == 0):
+    elif(computer == 2 and playerInt == 0):
         result = 1
 
-    elif(bot == 0 and playerInt == 2):
+    elif(computer == 0 and playerInt == 2):
         result = 2
 
-    elif(bot == 1 and playerInt == 0):
+    elif(computer == 1 and playerInt == 0):
         result = 2
 
-    elif(bot == 2 and playerInt == 1):
+    elif(computer == 2 and playerInt == 1):
         result = 2
         
     resultMessages = [
         "It's a tie! Both of you chose " + str(intToOption[playerInt] + "."),
-        "Player Win! Player chose " + str(intToOption[playerInt] + " while Bot chose " + str(intToOption[bot]) + ". " + intToOption[playerInt] + " beats " + intToOption[bot] + "."),
-        "Bot Win! Player chose " + str(intToOption[playerInt] + " while Bot chose " + str(intToOption[bot]) + ". " + intToOption[bot] + " beats " + intToOption[playerInt] + ".")
+        "Player Win! Player chose " + str(intToOption[playerInt] + " while Computer chose " + str(intToOption[computer]) + ". " + intToOption[playerInt] + " beats " + intToOption[computer] + "."),
+        "Computer Win! Player chose " + str(intToOption[playerInt] + " while Computer chose " + str(intToOption[computer]) + ". " + intToOption[computer] + " beats " + intToOption[playerInt] + ".")
     ]
 
     print(resultMessages[result] +"\n")
