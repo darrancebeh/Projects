@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your mom is disappointed</title>
+
+    <script>
+        var moans = 0;
+        var audio = new Audio("moan.mp3");
+
+        function increment(){
+            moans++;
+            document.querySelector("#moans").innerHTML = "You have moaned " + moans + " times."
+        }
+
+        function moanSound(){
+            var audio = document.getElementById("audio");
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        function main(){
+            increment();
+            moanSound();
+        }
+
+        function moanStop(){
+            var audio = document.getElementById("audio");
+            audio.pause();
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id="moans">You have moaned 0 times.</h1>
+    <button onclick="main()">click to moan lol</button>
+    <button onclick="moanStop()">stop the moan!</button>
+    <audio id="audio" src="moan.mp3"></audio>
+</body>
+</html>
